@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: StephanPeters
+Main-Class: edu/csuglobal/csc372/portfolio/Main
+

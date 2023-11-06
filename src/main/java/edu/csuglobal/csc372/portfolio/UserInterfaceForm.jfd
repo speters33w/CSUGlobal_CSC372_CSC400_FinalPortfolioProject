@@ -1,0 +1,74 @@
+JFDML JFormDesigner: "9.0.0.0.340" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"minimumSize": new java.awt.Dimension( 320, 240 )
+			"preferredSize": new java.awt.Dimension( 640, 480 )
+			"maximumSize": new java.awt.Dimension( 1280, 960 )
+			add( new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "file"
+					"text": "File"
+					"font": new java.awt.Font( "D-DIN", 1, 16 )
+					"displayedMnemonicIndex": 0
+					"mnemonic": 70
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "show"
+						"text": "Show Date and Time"
+						"font": new java.awt.Font( "D-DIN", 1, 16 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "showDateAndTime", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "save"
+						"text": "Save Date and Time"
+						"mnemonic": 83
+						"font": new java.awt.Font( "D-DIN", 1, 16 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "save", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+						name: "changeBackground"
+						"text": "Change Background Color"
+						"font": new java.awt.Font( "D-DIN", 1, 16 )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "green"
+							"text": "Green"
+							"background": sfield java.awt.Color green
+							"font": new java.awt.Font( "D-DIN", 1, 16 )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "green", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "orange"
+							"text": "Orange"
+							"font": new java.awt.Font( "D-DIN", 1, 16 )
+							"background": sfield java.awt.Color orange
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "orange", true ) )
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "exit"
+						"text": "Exit"
+						"font": new java.awt.Font( "D-DIN", 1, 16 )
+						"mnemonic": 88
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "exit", true ) )
+					} )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "displayField"
+				"font": new java.awt.Font( "D-DIN", 1, 44 )
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 365, 210 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
