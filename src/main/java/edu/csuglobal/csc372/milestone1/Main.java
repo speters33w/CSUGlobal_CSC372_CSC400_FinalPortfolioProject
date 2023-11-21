@@ -1,4 +1,9 @@
-package edu.csuglobal.csc372.portfolio;
+package edu.csuglobal.csc372.milestone1;
+
+import edu.csuglobal.csc372.milestone1.bank_account.BankAccount;
+import edu.csuglobal.csc372.milestone1.bank_account.CheckingAccount;
+import edu.csuglobal.csc372.milestone1.bank_account.GUIBankAccount;
+import edu.csuglobal.csc372.milestone1.user_interface.UserInterface;
 
 import java.util.Scanner;
 
@@ -12,9 +17,11 @@ public final class Main {
             args = new String[1];
             Scanner scanner = new Scanner(System.in);
             do {
-                System.out.println("Enter 1 for module 1 Critical Thinking, " +
-                                   "2 for module 2 Critical Thinking, " +
-                                   "3 for module 3 Critical Thinking");
+                System.out.println("""
+                                   Enter:\s
+                                   1 for module 1 Critical Thinking, Checking Account (Console Test App)
+                                   2 for module 2 Critical Thinking, GUI Bank Account
+                                   3 for module 3 Critical Thinking, User Interface (Interactive Swing GUI)""");
                 args[0] = scanner.nextLine().substring(0, 1);
             } while (!args[0].equals("1") && !args[0].equals("2") && !args[0].equals("3"));
         }

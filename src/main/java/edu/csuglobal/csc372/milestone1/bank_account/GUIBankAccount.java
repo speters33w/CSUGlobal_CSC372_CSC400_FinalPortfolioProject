@@ -1,4 +1,4 @@
-package edu.csuglobal.csc372.portfolio;
+package edu.csuglobal.csc372.milestone1.bank_account;
 
 import javax.swing.*;
 import java.awt.*;

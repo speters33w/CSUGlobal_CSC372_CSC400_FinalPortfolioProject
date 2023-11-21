@@ -1,4 +1,4 @@
-package edu.csuglobal.csc372.portfolio;
+package edu.csuglobal.csc372.milestone1.bank_account;
 
 public class BankAccount {
     private String firstName;
@@ -6,6 +6,7 @@ public class BankAccount {
     private String accountID;
     private double balance;
 
+    @SuppressWarnings("unused")
     private BankAccount() {
     }
 

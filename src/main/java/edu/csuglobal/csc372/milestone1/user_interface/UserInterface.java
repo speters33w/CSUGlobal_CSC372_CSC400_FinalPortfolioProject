@@ -1,4 +1,4 @@
-package edu.csuglobal.csc372.portfolio;
+package edu.csuglobal.csc372.milestone1.user_interface;
 
 import java.awt.*;
 import java.awt.event.*;

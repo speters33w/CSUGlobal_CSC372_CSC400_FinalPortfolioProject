@@ -3,7 +3,8 @@ package util.speters33w;
 import java.awt.Color;
 import java.util.Random;
 
-public class RandomColorGenerator {
+@SuppressWarnings("checkstyle:magicnumber")
+public final class RandomColorGenerator {
 
     private RandomColorGenerator() {}
 
