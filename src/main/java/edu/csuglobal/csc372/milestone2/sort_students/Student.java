@@ -13,6 +13,18 @@ A student object consists of the following fields:
 */
 package edu.csuglobal.csc372.milestone2.sort_students;
 
+/*
+        <!-- https://mvnrepository.com/artifact/com.tupilabs/human-name-parser -->
+        <dependency>
+            <groupId>com.tupilabs</groupId>
+            <artifactId>human-name-parser</artifactId>
+            <version>0.2</version>
+        </dependency>
+ */
+import com.tupilabs.human_name_parser.HumanNameParserBuilder;
+import com.tupilabs.human_name_parser.HumanNameParserParser;
+import com.tupilabs.human_name_parser.Name;
+
 import java.util.ArrayList;
 
 /**
@@ -64,6 +76,40 @@ public class Student implements Comparable<Student>, Cloneable   {
      */
     public String getName() {
         return name;
+    }
+
+    /**
+     Parses a human name that can include prefixes, Dr, Fr, Mr, Miss, The Honorable, etc.
+     * Uses the <a href = "https://github.com/tupilabs/HumanNameParser.java">
+     *     com.tupilabs.human_name_parser
+     * </a> library to parse a human name that can include prefixes, Dr, Fr, Mr, Miss, The Honorable, etc
+     * and return the first name of the student.
+     *
+     * @return The first as a string, depending on the boolean lastName argument.
+     * @see com.tupilabs.human_name_parser.HumanNameParserParser
+     */
+    public String getFirstName() {
+        Name parsedName = new Name(name);
+        HumanNameParserBuilder builder = new HumanNameParserBuilder(name);
+        HumanNameParserParser parser = builder.build();
+        return parser.getFirst();
+    }
+
+    /**
+     Parses a human name that can include prefixes, Dr, Fr, Mr, Miss, The Honorable, etc.
+     * Uses the <a href = "https://github.com/tupilabs/HumanNameParser.java">
+     *     com.tupilabs.human_name_parser
+     * </a> library to parse a human name that can include suffixes, Jr, III, MD, etc.
+     * and return the last name of the student.
+     *
+     * @return The first as a string, depending on the boolean lastName argument.
+     * @see com.tupilabs.human_name_parser.HumanNameParserParser
+     */
+    public String getLastName() {
+        Name parsedName = new Name(name);
+        HumanNameParserBuilder builder = new HumanNameParserBuilder(name);
+        HumanNameParserParser parser = builder.build();
+        return parser.getLast();
     }
 
     /**
@@ -175,20 +221,6 @@ public class Student implements Comparable<Student>, Cloneable   {
     @Override
     public int compareTo(Student other) {
         return Integer.compare(this.rollno, other.rollno);
-    }
-
-    /**
-     * Allows sorting algorithms to sort by last name.
-     * It will not properly sort if prefixes, Dr, Fr, Mr, Miss, The Honorable, etc.  are present in the name field.
-     * @param other the student object to be compared to.
-     * @return a negative integer, zero, or a positive integer as this object
-     * is less than, equal to, or greater than the specified object.
-     */
-    public int compareLastNameTo(Student other) {
-        // todo this can't handle Fr. Thurston Howell, III, or Billy Bob Jr., MD. Needs a name parser.
-        String thisLastName = this.name.split(" ")[this.name.split(" ").length - 1];
-        String studentLastName = other.name.split(" ")[other.name.split(" ").length - 1];
-        return thisLastName.compareTo(studentLastName);
     }
 
     /**

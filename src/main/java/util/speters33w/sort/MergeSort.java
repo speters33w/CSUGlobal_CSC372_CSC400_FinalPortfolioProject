@@ -1,7 +1,8 @@
 package util.speters33w.sort;
 
+
 /**
- Sorts an array of comparable objects from smallest to largest using Merge Sort.
+ * Sorts an array into ascending order using Merge Sort.
  */
 public class MergeSort {
 
@@ -9,7 +10,9 @@ public class MergeSort {
     private MergeSort() {}
 
     /**
+     * Sorts an array into ascending order using Merge Sort.
      * Main entry for the sort algorithm, takes in one array of Comparables as an argument.
+     *
      * @param array The array to be sorted.
      * @param <T> a Comparable type.
      */
@@ -19,7 +22,6 @@ public class MergeSort {
     }
 
     /**
-     *
      * @param array the array being sorted.
      * @param start the starting index of the array being sorted.
      * @param end the ending index of the array being sorted.

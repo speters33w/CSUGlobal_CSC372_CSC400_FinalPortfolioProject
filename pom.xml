@@ -18,12 +18,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>21-ea+5</version>
+            <version>21-ea+17</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>21-ea+5</version>
+            <version>21-ea+17</version>
         </dependency>
 
         <dependency>
@@ -37,6 +37,12 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.tupilabs/human-name-parser -->
+        <dependency>
+            <groupId>com.tupilabs</groupId>
+            <artifactId>human-name-parser</artifactId>
+            <version>0.2</version>
         </dependency>
     </dependencies>
 

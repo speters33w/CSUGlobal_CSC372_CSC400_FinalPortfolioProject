@@ -24,7 +24,7 @@ public class SelectionSortStudent {
             int minPosition = i;
 
             for (int j = i + 1; j < students.length; j++) {
-                if (students[minPosition].compareLastNameTo(students[j]) > 0) {
+                if (students[minPosition].getLastName().compareTo(students[j].getLastName()) > 0) {
                     minPosition = j;
                 }
             }

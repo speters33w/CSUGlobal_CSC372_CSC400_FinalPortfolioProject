@@ -20,12 +20,14 @@ public class Main {
         ArrayList<Student> students = generateStudents();
         System.out.println("\nStudents as an unsorted ArrayList:");
         printStudents(students);
-        TestSort.isSorted(Student.studentArrayListToArray(students));  // Used to test TestSort.
+//        TestSort.isSorted(Student.studentArrayListToArray(students));  // Used to test TestSort.
 
         ArrayList<Student> studentClone1 = (ArrayList<Student>) students.clone();
         ArrayList<Student> studentClone2 = (ArrayList<Student>) students.clone();
         ArrayList<Student> studentClone3 = (ArrayList<Student>) students.clone();
         ArrayList<Student> studentClone4 = (ArrayList<Student>) students.clone();
+        ArrayList<Student> studentClone5 = (ArrayList<Student>) students.clone();
+        ArrayList<Student> studentClone6 = (ArrayList<Student>) students.clone();
 
         // Sort using a Selection Sort algorithm.
         stopwatch = new Stopwatch();
@@ -34,11 +36,11 @@ public class Main {
         TestSort.isSorted(students);
         stopwatch = new Stopwatch();
         students =  Student.arrayToStudentArrayList(SortStudents.sortByLastNameWithSelectionSort(studentClone1));
-        System.out.printf("%nTime elapsed for Sort by Last Name using Selection Sort: %s%n%n", stopwatch.elapsedTime());
+        System.out.printf("%nTime elapsed for Sort by Last Name using Selection Sort with a Human Name Parser: %s%n%n",
+                stopwatch.elapsedTime());
         String[] lastNames = new String[students.size()];
         for (int i = 0; i < students.size(); i++) {
-            lastNames[i] = students.get(i).getName().split(" ")
-                    [students.get(i).getName().split(" ").length-1];
+            lastNames[i] = students.get(i).getLastName();
         }
         TestSort.isSorted(lastNames);
 
@@ -58,6 +60,18 @@ public class Main {
         stopwatch = new Stopwatch();
         students =  Student.arrayToStudentArrayList(SortStudents.sortByRollNumberWithShellSort(studentClone4));
         System.out.printf("%nTime elapsed using edu.princeton.cs.algs4 Shell Sort: %s%n%n", stopwatch.elapsedTime());
+        TestSort.isSorted(students);
+
+        // Sort using insertion sort algorithm after conversion to a Student[] array.
+        stopwatch = new Stopwatch();
+        students =  Student.arrayToStudentArrayList(SortStudents.sortByRollNumberWithInsertionSort(studentClone5));
+        System.out.printf("%nTime elapsed using Insertion Sort: %s%n%n", stopwatch.elapsedTime());
+        TestSort.isSorted(students);
+
+        // Sort using heap sort algorithm after conversion to a Student[] array.
+        stopwatch = new Stopwatch();
+        students =  Student.arrayToStudentArrayList(SortStudents.sortByRollNumberWithHeapSort(studentClone6));
+        System.out.printf("%nTime elapsed using Heap Sort: %s%n%n", stopwatch.elapsedTime());
         TestSort.isSorted(students);
     }
 

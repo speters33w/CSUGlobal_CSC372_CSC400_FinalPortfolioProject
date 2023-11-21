@@ -2,6 +2,7 @@ module edu.csuglobal.csc372.portfolio {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.desktop;
+    requires human.name.parser;
 
 
     opens edu.csuglobal.csc372.milestone1 to javafx.fxml;

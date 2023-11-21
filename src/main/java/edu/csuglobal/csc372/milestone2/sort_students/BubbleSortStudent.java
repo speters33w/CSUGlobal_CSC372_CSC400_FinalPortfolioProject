@@ -38,10 +38,9 @@ public class BubbleSortStudent {
      * @return an arraylist of Student objects sorted by first name.
      */
     public static ArrayList<Student> sortByFirstName(ArrayList<Student> students) {
-        // todo this can't handle name prefixes, Dr, Fr, Mr, Miss, The Honorable, etc.
         for (int i = 0; i < students.size(); i++) {
             for (int j = i + 1; j < students.size(); j++) {
-                if (students.get(i).getName().compareTo(students.get(j).getName()) > 0) {
+                if (students.get(i).getFirstName().compareTo(students.get(i).getFirstName()) > 0) {
                     Student temp = students.get(i);
                     students.set(i, students.get(j));
                     students.set(j, temp);
@@ -61,11 +60,7 @@ public class BubbleSortStudent {
     public static ArrayList<Student> sortByLastName(ArrayList<Student> students) {
         for (int i = 0; i < students.size(); i++) {
             for (int j = i + 1; j < students.size(); j++) {
-                // todo this can't handle Fr. Thurston Howell, III, or Billy Bob Jr., MD. Needs a name parser.
-                if (students.get(i).getName().split(" ")
-                            [students.get(i).getName().split(" ").length - 1]
-                            .compareTo(students.get(j).getName().split(" ")
-                                    [students.get(j).getName().split(" ").length - 1]) > 0) {
+                if (students.get(i).getLastName().compareTo(students.get(i).getLastName()) > 0) {
                     Student temp = students.get(i);
                     students.set(i, students.get(j));
                     students.set(j, temp);

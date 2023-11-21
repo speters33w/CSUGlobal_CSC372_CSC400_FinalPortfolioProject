@@ -1,15 +1,15 @@
 package util.speters33w.sort;
 
 /**
-Sorts an array of comparable objects from smallest to largest using Selection Sort.
-*/
+ * Sorts an array into ascending order using Selection Sort.
+ */
 public final class SelectionSort {
 
    @SuppressWarnings("unused")
    private SelectionSort() {}
 
    /**
-    * Sorts the first n objects in an array into ascending order.
+    * Sorts an array into ascending order using Selection Sort.
     *
     * @param array An array of Comparable objects.
     */

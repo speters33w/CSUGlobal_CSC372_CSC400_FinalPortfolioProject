@@ -1,14 +1,14 @@
 package util.speters33w.sort;
 
 /**
- Sorts an array of comparable objects from smallest to largest using Bubble Sort.
+ * Sorts an array into ascending order using Bubble Sort.
  */
 public final class BubbleSort {
     @SuppressWarnings("unused")
     private BubbleSort() {}
 
     /**
-     * Sorts an array of comparable objects from smallest to largest using Bubble Sort.
+     * Sorts an array into ascending order using Bubble Sort.
      *
      * @param array the array to be sorted.
      */

@@ -39,13 +39,13 @@ public final class Main {
     public static void testConsoleApp() {
         BankAccount bankAccount = new BankAccount("Jane", "Doe", "JD1234");
         CheckingAccount checkingAccount = new CheckingAccount("John", "Smith", "JS5678", 0.051f);
-        bankAccount.accountSummary();
+        bankAccount.printAccountSummary();
         bankAccount.deposit(10);
-        bankAccount.accountSummary();
+        bankAccount.printAccountSummary();
         bankAccount.withdrawal(20);
-        bankAccount.accountSummary();
+        bankAccount.printAccountSummary();
         bankAccount.withdrawal(5);
-        bankAccount.accountSummary();
+        bankAccount.printAccountSummary();
         checkingAccount.displayAccount();
         checkingAccount.deposit(10);
         checkingAccount.displayAccount();
