@@ -43,5 +43,7 @@ build/
 .DS_Store
 
 ### Other Files ###
+*.zip
 /log.txt
-/PortfolioMilestones.zip
+/students.txt
+/ReadMe_CSC400_Milestone2.md
