@@ -20,21 +20,21 @@ public final class SortStudents {
         // Sort the array of Student objects.
         SelectionSort.selectionSort(studentArray);
         System.out.println("\nStudents sorted by Roll Number using Selection Sort");
-//        for (Student student : studentArray) {
-//            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
-//        }
+        for (Student student : studentArray) {
+            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
+        }
         return studentArray;
     }
 
     public static Student[] sortByLastNameWithSelectionSort(ArrayList<Student> students) {
         Student[] studentArray = Student.studentArrayListToArray(students);
 
-        // Sort the array of Student objects.
+        // Sort the array of Student objects by last name.
         SelectionSortStudent.sortStudentsByLastName(studentArray);
         System.out.println("\nStudents sorted by Last Name using Selection Sort");
-//        for (Student student : studentArray) {
-//            System.out.printf("Name: %-16s Roll Number: %d.%n", student.getName() + ";", student.getRollno());
-//        }
+        for (Student student : studentArray) {
+            System.out.printf("Name: %-16s Roll Number: %d.%n", student.getName() + ";", student.getRollno());
+        }
         return studentArray;
     }
 
@@ -45,9 +45,9 @@ public final class SortStudents {
         // Sort the array of Student objects.
         MergeSort.mergeSort(studentArray);
         System.out.println("\nStudents sorted by Roll Number using Merge Sort");
-//        for (Student student : studentArray) {
-//            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
-//        }
+        for (Student student : studentArray) {
+            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
+        }
         return studentArray;
     }
 
@@ -57,9 +57,9 @@ public final class SortStudents {
 
         BubbleSort.bubbleSort(studentArray);
         System.out.println("\nStudents sorted by Roll Number using Bubble Sort");
-//        for (Student student : studentArray) {
-//            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
-//        }
+        for (Student student : studentArray) {
+            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
+        }
         return studentArray;
     }
 
@@ -67,9 +67,9 @@ public final class SortStudents {
         ArrayList<Student> sortedStudents = BubbleSortStudent.sortByRollno(students);
         BubbleSortStudent.sortByLastName(sortedStudents);
         System.out.println("\nStudents sorted by Last Name:");
-//        for (Student student : sortedStudents) {
-//            System.out.printf("Name: %-16s Roll Number: %d.%n", student.getName() + ";", student.getRollno());
-//        }
+        for (Student student : sortedStudents) {
+            System.out.printf("Name: %-16s Roll Number: %d.%n", student.getName() + ";", student.getRollno());
+        }
     }
 
     /* ***** USING SHELL SORT ***** */
@@ -79,9 +79,9 @@ public final class SortStudents {
         // Sort the array of Student objects.
         Shell.sort(studentArray);
         System.out.println("\nStudents sorted by Roll Number using Shell Sort");
-//        for (Student student : studentArray) {
-//            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
-//        }
+        for (Student student : studentArray) {
+            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
+        }
         return studentArray;
     }
 
@@ -91,9 +91,9 @@ public final class SortStudents {
         // Sort the array of Student objects.
         InsertionSort.insertionSort(studentArray);
         System.out.println("\nStudents sorted by Roll Number using Insertion Sort");
-//        for (Student student : studentArray) {
-//            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
-//        }
+        for (Student student : studentArray) {
+            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
+        }
         return studentArray;
     }
 
@@ -103,9 +103,9 @@ public final class SortStudents {
         // Sort the array of Student objects.
         HeapSort.heapSort(studentArray);
         System.out.println("\nStudents sorted by Roll Number using Heap Sort");
-//        for (Student student : studentArray) {
-//            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
-//        }
+        for (Student student : studentArray) {
+            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
+        }
         return studentArray;
     }
 }

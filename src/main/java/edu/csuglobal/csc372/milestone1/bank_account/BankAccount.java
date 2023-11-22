@@ -172,7 +172,7 @@ public class BankAccount {
      * Prints an account summary.
      */
     public void printAccountSummary() {
-        System.out.print(this.toString());
+        System.out.print(this);
     }
 
 }

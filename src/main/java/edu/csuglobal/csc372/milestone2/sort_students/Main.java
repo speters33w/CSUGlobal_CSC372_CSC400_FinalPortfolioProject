@@ -22,12 +22,12 @@ public class Main {
         printStudents(students);
 //        TestSort.isSorted(Student.studentArrayListToArray(students));  // Used to test TestSort.
 
-        ArrayList<Student> studentClone1 = (ArrayList<Student>) students.clone();
-        ArrayList<Student> studentClone2 = (ArrayList<Student>) students.clone();
-        ArrayList<Student> studentClone3 = (ArrayList<Student>) students.clone();
-        ArrayList<Student> studentClone4 = (ArrayList<Student>) students.clone();
-        ArrayList<Student> studentClone5 = (ArrayList<Student>) students.clone();
-        ArrayList<Student> studentClone6 = (ArrayList<Student>) students.clone();
+        ArrayList<Student> studentClone1 = new ArrayList<>(students);
+        ArrayList<Student> studentClone2 = new ArrayList<>(students);
+        ArrayList<Student> studentClone3 = new ArrayList<>(students);
+        ArrayList<Student> studentClone4 = new ArrayList<>(students);
+        ArrayList<Student> studentClone5 = new ArrayList<>(students);
+        ArrayList<Student> studentClone6 = new ArrayList<>(students);
 
         // Sort using a Selection Sort algorithm.
         stopwatch = new Stopwatch();
