@@ -41,54 +41,79 @@ Added more sort algorithms in [src/main/java/util/speters33w/sort/](src/main/jav
 File Tree
 
 ```bash
+.
 ├── log.txt
 ├── mvnw
 ├── mvnw.cmd
 ├── pom.xml
+├── Portfolio.iml
+├── PortfolioMilestones.zip
 ├── ReadMe.md
-└─ src
+├── students.txt
+└── src
     └── main
-        |
+        │
         ├── MANIFEST.MF
-        |
+        │
         ├── java
-        |   |
+        │   │
         │   ├── module-info.java
-        |   |
+        │   │
         │   ├── edu
         │   │   ├── csuglobal
         │   │   │   └── csc372
+        │   │   │       │
         │   │   │       ├── milestone1
-        │   │   │       │   │        
-        │   │   │       │   ├── Main.java 
-        │   │   │       │   │        
+        │   │   │       │   │
+        │   │   │       │   ├── Main.java
+        │   │   │       │   │
         │   │   │       │   ├── bank_account
         │   │   │       │   │   ├── BankAccount.java
         │   │   │       │   │   ├── CheckingAccount.java
         │   │   │       │   │   └── GUIBankAccount.java
+        │   │   │       │   │
         │   │   │       │   └── user_interface
         │   │   │       │       ├── UserInterface.java
         │   │   │       │       └── UserInterfaceForm.jfd
-        │   │   │       │        
-        │   │   │       └── milestone2
-        │   │   │           │                
-        │   │   │           ├── Main.java
-        │   │   │           │                
-        │   │   │           ├── recursion
-        │   │   │           │   ├── Iterate.java
-        │   │   │           │   ├── Recurse.java
-        │   │   │           │   ├── RecursionRunner.java
-        │   │   │           │   ├── Stream.java
-        │   │   │           │   └── TestRecurse.java
-        │   │   │           └── sort_students
-        │   │   │               ├── BubbleSortStudent.java
-        │   │   │               ├── Main.java
-        │   │   │               ├── SearchStudent.java
-        │   │   │               ├── SelectionSortStudent.java
-        │   │   │               ├── SortStudents.java
-        │   │   │               ├── Student.java
-        │   │   │               └── StudentComparables.java
-        |   |   |
+        │   │   │       │
+        │   │   │       ├── milestone2
+        │   │   │       │   │
+        │   │   │       │   ├── Main.java
+        │   │   │       │   │
+        │   │   │       │   ├── recursion
+        │   │   │       │   │   ├── Iterate.java
+        │   │   │       │   │   ├── Recurse.java
+        │   │   │       │   │   ├── RecursionRunner.java
+        │   │   │       │   │   ├── Stream.java
+        │   │   │       │   │   └── TestRecurse.java
+        │   │   │       │   │
+        │   │   │       │   ├── shapes
+        │   │   │       │   │   ├── Circle.java
+        │   │   │       │   │   ├── Cone.java
+        │   │   │       │   │   ├── Cylinder.java
+        │   │   │       │   │   ├── NumberGenerator.java
+        │   │   │       │   │   ├── Rectangle.java
+        │   │   │       │   │   ├── Shape.java
+        │   │   │       │   │   ├── Shape2D.java
+        │   │   │       │   │   ├── Shape3D.java
+        │   │   │       │   │   ├── ShapeArray.java
+        │   │   │       │   │   ├── Sphere.java
+        │   │   │       │   │   ├── TestTriangleAreaCalculation.java
+        │   │   │       │   │   └── Triangle.java
+        │   │   │       │   │
+        │   │   │       │   └── sort_students
+        │   │   │       │       ├── BubbleSortStudent.java
+        │   │   │       │       ├── Main.java
+        │   │   │       │       ├── SearchStudent.java
+        │   │   │       │       ├── SelectionSortStudent.java
+        │   │   │       │       ├── SortStudents.java
+        │   │   │       │       ├── Student.java
+        │   │   │       │       └── StudentComparables.java
+        │   │   │       │
+        │   │   │       └── final_program
+        │   │   │           │
+        │   │   │           └── Main.java
+        │   │   │
         │   │   └── princeton
         │   │       └── cs
         │   │           └── algs4
@@ -97,35 +122,29 @@ File Tree
         │   │               ├── StdIn.java
         │   │               ├── StdOut.java
         │   │               └── Stopwatch.java
-        |   |
-        │   ├── util
-        │   |   └── speters33w
-        │   |       ├── RandomColorGenerator.java
-        │   |       └── sort
-        │   |           ├── BubbleSort.java
-        │   |           ├── HeapSort.java
-        │   |           ├── InsertionSort.java
-        │   |           ├── MergeSort.java
-        │   |           ├── SelectionSort.java
-        │   |           └── TestSort.java
-        |   |
-        |   └── kdnewton
-        |       └── Tree.java
-        |      
+        │   │
+        │   ├── kdnewton
+        │   │   └── Tree.java
+        │   │
+        │   └── util
+        │       └── speters33w
+        │           ├── RandomColorGenerator.java
+        │           └── sort
+        │               ├── BubbleSort.java
+        │               ├── HeapSort.java
+        │               ├── InsertionSort.java
+        │               ├── MergeSort.java
+        │               ├── SelectionSort.java
+        │               └── TestSort.java
+        │
         └── resources
             ├── CSU_Global_Circle.png
             ├── CSU_Global_Circle.svg
-            |
-            ├── edu
-            │   └── csuglobal
-            │       └── csc372
-            │           └── portfolio
-            |
             ├── fonts
             │   ├── D-DIN-Bold.ttf
             │   └── OFL-1.1.txt
-            |
             ├── green.csv
             └── orange.csv
+            
 ```
 

@@ -1,0 +1,105 @@
+@startuml
+
+abstract class Shape {
+~ {abstract}String toString()
+}
+
+abstract class Shape3D {
+~ {abstract}double surfaceArea()
+~ {abstract}double volume()
+}
+Shape <|-- Shape3D
+
+abstract class Shape2D {
+~ {abstract}double area()
+~ {abstract}double perimeter()
+}
+Shape <|-- Shape2D
+
+class Sphere {
+- double radius
++ <<Create>> Sphere(double)
++ String toString()
++ double surfaceArea()
++ double volume()
+}
+Shape3D <|-- Sphere
+
+class Cylinder {
+- double radius
+- double height
++ <<Create>> Cylinder(double,double)
++ String toString()
++ double surfaceArea()
++ double volume()
+}
+Shape3D <|-- Cylinder
+
+class Cone {
+- double radius
+- double height
++ <<Create>> Cone(double,double)
++ String toString()
++ double surfaceArea()
++ double volume()
+}
+Shape3D <|-- Cone
+
+class Rectangle {
+- double width
+- double height
++ <<Create>> Rectangle(double,double)
++ String toString()
++ double area()
++ double perimeter()
+}
+Shape2D <|-- Rectangle
+
+class Circle {
+- double radius
++ <<Create>> Circle(double)
++ String toString()
++ double area()
++ double perimeter()
+}
+Shape2D <|-- Circle
+
+class Triangle {
+- double sideA
+- double sideB
+- double sideC
+- double height
++ <<Create>> Triangle(double,double,double)
++ String toString()
++ double area()
++ double perimeter()
++ double height()
+}
+Shape2D <|-- Triangle
+
+class ShapeArray {
++ {static} void main(String[])
++ {static} void shapes2D(double,double,double)
++ {static} void shapes3D(double,double)
+}
+Sphere    o-- ShapeArray
+Cylinder  o-- ShapeArray
+Cone      o-- ShapeArray
+Rectangle o-- ShapeArray
+Circle    o-- ShapeArray
+Triangle  o-- ShapeArray
+
+class ShapeArray$RandomGenerator {
+~ double x
+~ double y
+~ double z
+~ Random random
+~ <<Create>> RandomGenerator(double,double,double)
++ double getX()
++ double getY()
++ double getZ()
+}
+ShapeArray +.. ShapeArray$RandomGenerator
+
+
+@enduml

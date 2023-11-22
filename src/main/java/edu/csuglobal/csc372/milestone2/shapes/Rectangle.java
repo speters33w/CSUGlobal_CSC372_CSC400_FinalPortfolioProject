@@ -1,3 +1,25 @@
+/*
+CSU Global CSC 372 Module 4: Critical Thinking
+
+Critical Thinking Assignment (70 Points)
+
+Option #2:  Creating an Abstract Class Shape II
+
+I.
+
+Create a class "Rectangle" that extends the Shape class with the following specifications:
+
+    Attributes:
+        width, length
+
+    Constructor:
+        Implement a parameterized constructor needed initialize the data.
+
+    toString:
+        Implement a "toString" method that prints out the area and perimeter.
+
+Implement methods to compute the area and perimeter.
+ */
 package edu.csuglobal.csc372.milestone2.shapes;
 //CHECKSTYLE:OFF: checkstyle:magicnumber
 

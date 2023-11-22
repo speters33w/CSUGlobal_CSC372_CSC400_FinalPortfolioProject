@@ -1,3 +1,18 @@
+/*
+CSU Global CSC 372 Module 5: Critical Thinking
+
+Critical Thinking Assignment (90 Points)
+
+Option #1:  Implementing Recursion to Provide a Product
+
+Using recursion, create a program that will allow a user to enter five numbers.
+The program will provide the product of all five numbers using recursive methods.
+
+Option #2:  Implementing Recursion to Provide a Sum
+
+Using recursion, create a program that will allow a user to enter five numbers.
+The program will provide the sum of all five numbers using recursive methods.
+ */
 package edu.csuglobal.csc372.milestone2.recursion;
 
 import java.util.Arrays;

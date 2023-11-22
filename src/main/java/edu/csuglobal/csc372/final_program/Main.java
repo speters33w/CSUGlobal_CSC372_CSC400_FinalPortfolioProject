@@ -56,6 +56,10 @@ public class Main {
         scanner.close();
     }
 
+    /**
+     * Prints a Linked List of Students to the console and a text file.
+     * @param students the student list to print.
+     */
     public static void printStudentList(Collection<Student> students) {
         try (FileWriter fileWriter = new FileWriter("students.txt")) {
             System.out.println("\nStudent list (Sorted by Last Name)");
@@ -68,6 +72,12 @@ public class Main {
         }
     }
 
+    /**
+     * Generates a Linked List of 10 Student objects based on the list
+     * <a href="https://www.summet.com/dmsi/html/codesamples/addresses.html">
+     *     available here.</a>
+     * with zip codes validated.
+     */
     public static void generateStudents(LinkedList<Student> students) {
         Student student1 = new Student("Cecilia Chapman",
                 "532d MI Bn.\nAPO, AP 96301", 3.8);

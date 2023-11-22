@@ -1,3 +1,33 @@
+/*
+CSU Global CSC 372 Module 4: Critical Thinking
+
+Critical Thinking Assignment (70 Points)
+
+Option #1: Creating an Abstract Class Shape I
+
+IV.
+
+Create a driver class named "ShapeArray" with the following specifications:
+
+    Instantiate one sphere.
+    Instantiate one cylinder.
+    Instantiate one cone.
+    Store the class instances into an array named "shapeArray."
+    Loop through the array and print out the instance data of each object using the object instance's "toString" method.
+
+Option #2:  Creating an Abstract Class Shape II
+
+IV.
+
+Create a driver class named "ShapeArray" with the following specifications:
+
+    Instantiate one triangle.
+    Instantiate one circle.
+    Instantiate one square.
+    Store the class instances into an array named "shapeArray."
+    Loop through the array and print out the instance data of each object
+    using the object instance's "toString" method.
+ */
 package edu.csuglobal.csc372.milestone2.shapes;
 
 import java.util.Random;

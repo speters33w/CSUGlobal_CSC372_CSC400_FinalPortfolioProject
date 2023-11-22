@@ -1,3 +1,25 @@
+/*
+CSU Global CSC 372 Module 4: Critical Thinking
+
+Critical Thinking Assignment (70 Points)
+
+Option #1: Creating an Abstract Class Shape I
+
+I.
+
+Create a class "Sphere" that extends the Shape class with the following specifications:
+
+    Attributes:
+        Radius
+
+    Constructor:
+        Implement a parameterized constructor needed to initialize the data.
+
+    toString:
+        Implement a "toString" method that prints out the surface area and volume.
+
+Implement methods to compute the surface area and volume.
+ */
 package edu.csuglobal.csc372.milestone2.shapes;
 
 //CHECKSTYLE:OFF: checkstyle:magicnumber

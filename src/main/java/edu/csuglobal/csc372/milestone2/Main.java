@@ -1,6 +1,7 @@
 package edu.csuglobal.csc372.milestone2;
 
 import edu.csuglobal.csc372.milestone2.recursion.RecursionRunner;
+import edu.csuglobal.csc372.milestone2.shapes.ShapeArray;
 import edu.csuglobal.csc372.milestone2.sort_students.SortStudents;
 import edu.csuglobal.csc372.milestone2.sort_students.Student;
 
@@ -24,12 +25,14 @@ public class Main {
             do {
                 System.out.println("""
                                    Enter:\s
+                                   4 for module 4 Creating an Abstract Class Shape
                                    5 for module 5 Implementing Recursion to Provide a Product or Sum
                                    6 for module 6 Storing an ArrayList""");
                 args[0] = scanner.nextLine().substring(0, 1);
-            } while (!args[0].equals("5") && !args[0].equals("6"));
+            } while (!args[0].equals("4") &&!args[0].equals("5") && !args[0].equals("6"));
         }
         switch (Integer.parseInt(args[0])) {
+            case 4 -> ShapeArray.main(new String[0]); // CSC 372 Module 4 Critical Thinking
             case 5 -> RecursionRunner.main(new String[0]); // CSC 372 Module 5 Critical Thinking
             case 6 -> sort();  // CSC 372 Module 6 Critical Thinking.
             default -> System.out.println("Invalid input");
