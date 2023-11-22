@@ -41,4 +41,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Other Files ###
 /log.txt
+/PortfolioMilestones.zip

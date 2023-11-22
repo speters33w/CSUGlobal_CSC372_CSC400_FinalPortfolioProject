@@ -1,3 +1,23 @@
+/*
+CSU Global CSC 372 Module 1: Critical Thinking
+
+Critical Thinking Assignment (70 Points)
+
+Option #1:  Implementing a Superclass Bank Account
+
+Part 2: Implement a CheckingAccount class that inherits from the BankAccount class, that:
+
+    Has an interest rate attribute
+    Allows overdraft withdrawals and charges a $30 fee
+
+Methods:
+
+    processWithdrawal() - will display a negative balance that includes a $30 overdraft fee
+                          and denotes that a fee has been accessed
+    displayAccount() - should display all superclass attributes and provides an additional interest rate
+
+Ensure that your program has the two required classes and a test class.
+ */
 package edu.csuglobal.csc372.milestone1.bank_account;
 
 /**

@@ -1,3 +1,32 @@
+/*
+CSU Global CSC 372 Module 1: Critical Thinking
+
+Critical Thinking Assignment (70 Points)
+
+Option #1:  Implementing a Superclass Bank Account
+
+Part 1: Implement a superclass BankAccount that has the following fields and methods.
+
+Fields:
+
+    string firstName
+    string lastName
+    int accountID
+    double balance
+
+Methods:
+
+    constructor():  initialize balance to zero
+    deposit() - will accept a single value double parameter;
+        the parameter value is added to the existing balance
+    withdrawal() - accepts a single value double dollar amount;
+        the parameter value is subtracted from the existing balance
+    Setters and getters for firstName, lastName, and accountID
+    getBalance() getter to return the balance
+    accountSummary() - prints all account information
+
+Ensure that your program has the two required classes and a test class.
+ */
 package edu.csuglobal.csc372.milestone1.bank_account;
 
 /**

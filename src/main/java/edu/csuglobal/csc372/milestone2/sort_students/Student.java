@@ -10,6 +10,17 @@ A student object consists of the following fields:
     int rollno
     String name
     String address
+
+CSU Global CSC372 Module 8: Final Program
+
+Portfolio Project (300 Points)
+
+Write a Java program that incorporates a loop that prompts the user for student data.
+Student data are private fields in a student class including:
+
+    String name
+    String address
+    double GPA
 */
 package edu.csuglobal.csc372.milestone2.sort_students;
 
@@ -32,6 +43,7 @@ import java.util.ArrayList;
  *     int rollno
  *     String name
  *     String address
+ *     double GPA
  */
 @SuppressWarnings("unused")
 public class Student implements Comparable<Student>, Cloneable   {
@@ -48,6 +60,10 @@ public class Student implements Comparable<Student>, Cloneable   {
      * The mailing address of the student.
      */
     private String address;
+    /**
+     * The GPA of the student.
+     */
+    private double gpa;
 
     /**
      * Construct a new student object.
@@ -60,6 +76,19 @@ public class Student implements Comparable<Student>, Cloneable   {
         this.rollno = rollno;
         this.name = name;
         this.address = address;
+    }
+
+    /**
+     * Construct a new student object.
+     * @param name The first and last name of the student.
+     * @param address The mailing address of the student.
+     * @param gpa The GPA of the student.
+     */
+    public Student(String name, String address, double gpa) {
+        super();
+        this.name = name;
+        this.address = address;
+        this.gpa = gpa;
     }
 
     /**
@@ -82,7 +111,7 @@ public class Student implements Comparable<Student>, Cloneable   {
      Parses a human name that can include prefixes, Dr, Fr, Mr, Miss, The Honorable, etc.
      * Uses the <a href = "https://github.com/tupilabs/HumanNameParser.java">
      *     com.tupilabs.human_name_parser
-     * </a> library to parse a human name that can include prefixes, Dr, Fr, Mr, Miss, The Honorable, etc
+     * </a> library to parse a human name that can include prefixes, Dr, Fr, Mr, Miss, The Honorable, etc.
      * and return the first name of the student.
      *
      * @return The first as a string, depending on the boolean lastName argument.
@@ -121,10 +150,19 @@ public class Student implements Comparable<Student>, Cloneable   {
     }
 
     /**
+     * Returns the GPA of the student.
+     * @return the GPA of the student.
+     */
+    public double getGPA() {
+        return gpa;
+    }
+
+    /**
      * Sets the roll number of the student.
+     * This method is private to avoid conflicts in the CompareTo() method.
      * @param rollno the new roll number of the student.
      */
-    public void setRollno(int rollno) {
+    private void setRollno(int rollno) {
         this.rollno = rollno;
     }
 
@@ -142,6 +180,14 @@ public class Student implements Comparable<Student>, Cloneable   {
      */
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    /**
+     * Sets the GPA of the student.
+     * @param gpa the new GPA of the student.
+     */
+    public void setGPA(double gpa) {
+        this.gpa = gpa;
     }
 
     /**
@@ -179,7 +225,11 @@ public class Student implements Comparable<Student>, Cloneable   {
      */
     @Override
     public String toString() {
-        return String.format("Roll Number: %d %n%s %n%s%n", this.rollno, this.name, this.address);
+        if (this.rollno != 0) {
+            return String.format("Roll Number: %d %n%s %n%s%n", this.rollno, this.name, this.address);
+        } else {
+            return String.format("%s %n%s %nGPA: %.1f%n", this.name, this.address, this.gpa);
+        }
     }
 
     /**
@@ -199,6 +249,8 @@ public class Student implements Comparable<Student>, Cloneable   {
                 return false;
         if (rollno!= other.rollno)
             return false;
+        if (gpa!= other.gpa)
+            return false;
         } else if (!name.equals(other.name))
             return false;
         if (address == null) {
@@ -207,7 +259,12 @@ public class Student implements Comparable<Student>, Cloneable   {
     }
 
     /**
-     * Compares this student's roll number with the specified object's roll number.
+     * This method is designed specifically for use with CSU Global CSC 372 Assignment 6
+     * (sort by roll number) and the CSC 372 final program (sort by last name).
+     * If used to sort by roll number, all students must be assigned a roll number.
+     * Compares this student's last name with the other specified student's name,
+     * unless both students have a roll number, then compares this student's roll number
+     * with the specified object's roll number.
      *
      * @param other the student object to be compared.
      * @return a negative integer, zero, or a positive integer as this object
@@ -220,7 +277,13 @@ public class Student implements Comparable<Student>, Cloneable   {
      */
     @Override
     public int compareTo(Student other) {
-        return Integer.compare(this.rollno, other.rollno);
+        // if this is for Critical Thinking Assignment 6
+        if (this.rollno != 0 && other.rollno != 0) {
+            return Integer.compare(this.rollno, other.rollno);
+        // if this is for Final Program
+        } else {
+            return this.getLastName().compareTo(other.getLastName());
+        }
     }
 
     /**
