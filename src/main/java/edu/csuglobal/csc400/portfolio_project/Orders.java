@@ -23,7 +23,6 @@ public class Orders<Order extends LinkedList<? super Order>> {
         super();
     }
 
-
     /**
      * Returns the Queue of Orders as an Orders&lt;Order&gt; object.
      *

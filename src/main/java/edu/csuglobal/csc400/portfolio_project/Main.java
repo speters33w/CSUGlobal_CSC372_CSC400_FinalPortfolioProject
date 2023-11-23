@@ -72,6 +72,7 @@ public class Main {
     public static void addOrder(Orders<Order> orders, Display display, Scanner scanner) {
         System.out.println("Enter the customer's last name: ");
         String customerLastName = scanner.nextLine();
+        customerLastName = customerLastName.substring(0, 1).toUpperCase() + customerLastName.substring(1);
         String orderNumberString = "-1";
         long orderNumber = -1;
         while (!orderNumberString.matches("\\d+") && orderNumberString.toUpperCase().charAt(0) != 'X') {
