@@ -108,4 +108,16 @@ public final class SortStudents {
         }
         return studentArray;
     }
+
+    public static Student[] sortByRollNumberWithQuickSort(ArrayList<Student> students) {
+        Student[] studentArray = Student.studentArrayListToArray(students);
+
+        // Sort the array of Student objects.
+        QuickSort.quickSort(studentArray);
+        System.out.println("\nStudents sorted by Roll Number using Quick Sort");
+        for (Student student : studentArray) {
+            System.out.printf("Roll Number: %d; Name: %s.%n", student.getRollno(), student.getName());
+        }
+        return studentArray;
+    }
 }

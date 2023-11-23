@@ -43,7 +43,9 @@ build/
 .DS_Store
 
 ### Other Files ###
+*.docx
 *.zip
 /log.txt
 /students.txt
 /ReadMe_CSC400_Milestone2.md
+/src/main/java/sandbox/

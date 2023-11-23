@@ -9,7 +9,7 @@ public class ArrayBag<T> implements BagInterface<T>
 {
 	private final T[] bag; 
 	private int numberOfEntries;
-    private boolean initialized = false;
+    private boolean initialized;
 	private static final int DEFAULT_CAPACITY = 25;
 	private static final int MAX_CAPACITY = 10000;
 

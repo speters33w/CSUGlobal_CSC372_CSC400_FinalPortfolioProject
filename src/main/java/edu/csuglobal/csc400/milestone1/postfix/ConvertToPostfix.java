@@ -34,12 +34,8 @@ public class ConvertToPostfix {
             switch (precedence) {
                 case -1 -> throw new IllegalArgumentException(
                         "Invalid infix expression: " + infix); // invalid infix expression
-                case 0 -> { // alphanumeric (variable or digit)
-                    postfix.append(" ").append(nextCharacter);
-                }
-                case 5 -> { // '^'
-                    operatorStack.push(nextCharacter);
-                }
+                case 0 -> postfix.append(" ").append(nextCharacter); // alphanumeric (variable or digit)
+                case 5 ->  operatorStack.push(nextCharacter); // '^'
                 case 4, 3 -> { // '+', '-', '/', '*', '%'
                     while (!operatorStack.isEmpty() && precedence(nextCharacter) <= precedence(operatorStack.peek())) {
                         postfix.append(" ").append(operatorStack.peek());
@@ -47,10 +43,7 @@ public class ConvertToPostfix {
                     } // while (!operatorStack.isEmpty()
                     operatorStack.push(nextCharacter);
                 }
-                case 2 -> //noinspection DuplicateBranchesInSwitch
-                { // '('
-                    operatorStack.push(nextCharacter);
-                }
+                case 2 -> operatorStack.push(nextCharacter); // '('
                 case 1 -> { // ')' // stack is not empty if infix expression is valid
                     char topOperator = operatorStack.pop();
                     while (topOperator != '(') {

@@ -27,6 +27,7 @@ public class Main {
         ArrayList<Student> studentClone4 = new ArrayList<>(students);
         ArrayList<Student> studentClone5 = new ArrayList<>(students);
         ArrayList<Student> studentClone6 = new ArrayList<>(students);
+        ArrayList<Student> studentClone7 = new ArrayList<>(students);
 
         // Sort using a Selection Sort algorithm.
         stopwatch = new Stopwatch();
@@ -71,6 +72,12 @@ public class Main {
         stopwatch = new Stopwatch();
         students =  Student.arrayToStudentArrayList(SortStudents.sortByRollNumberWithHeapSort(studentClone6));
         System.out.printf("%nTime elapsed using Heap Sort: %s%n%n", stopwatch.elapsedTime());
+        TestSort.isSorted(students);
+
+        // Sort using quick sort algorithm after conversion to a Student[] array.
+        stopwatch = new Stopwatch();
+        students =  Student.arrayToStudentArrayList(SortStudents.sortByRollNumberWithQuickSort(studentClone7));
+        System.out.printf("%nTime elapsed using Quick Sort: %s%n%n", stopwatch.elapsedTime());
         TestSort.isSorted(students);
     }
 
