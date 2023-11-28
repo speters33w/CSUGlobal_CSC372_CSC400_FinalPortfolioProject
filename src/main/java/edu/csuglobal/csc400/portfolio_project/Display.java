@@ -1,8 +1,24 @@
+/*
+CSU Global CSC400 Module 8: Portfolio Project
+
+Portfolio Project (300 Points)
+
+Order List Handler for an Online Retailer
+
+Create a Display Class that will store a copy of the order queue in two arrays.
+Each array will contain the order list but
+    one will be sorted by name and the other sorted by order number.
+When an order is taken and stored in the Order Class the program will
+    update the Display Class arrays automatically and
+    sort them in descending order using quick sort and
+    output the contents to the console upon each entry of new data.
+*/
 package edu.csuglobal.csc400.portfolio_project;
 
 import util.speters33w.sort.QuickSort;
-import util.speters33w.sort.ReverseArray;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 
@@ -36,9 +52,9 @@ public class Display {
         this.ordersByOrderNumber = (orders.toArray(new Order[0]));
         orders.sort(Comparator.comparing(Order::getCustomerLastName));
         this.ordersByCustomerLastName = (orders.toArray(new Order[0]));
-        ReverseArray.reverse(this.ordersByCustomerLastName);
+        Collections.reverse(Arrays.asList(this.ordersByCustomerLastName));
         QuickSort.quickSort(this.ordersByOrderNumber);
-        ReverseArray.reverse(this.ordersByOrderNumber);
+        Collections.reverse(Arrays.asList(this.ordersByOrderNumber));
         if (orders.size() > 1) {
             System.out.println("Orders by order number (descending):");
             for (Order order : ordersByOrderNumber) {
@@ -67,9 +83,9 @@ public class Display {
         this.ordersByOrderNumber = (orders.toArray(new Order[0]));
         orders.sort(Comparator.comparing(Order::getCustomerLastName));
         this.ordersByCustomerLastName = (orders.toArray(new Order[0]));
-        ReverseArray.reverse(this.ordersByCustomerLastName);
+        Collections.reverse(Arrays.asList(this.ordersByCustomerLastName));
         QuickSort.quickSort(this.ordersByOrderNumber);
-        ReverseArray.reverse(this.ordersByOrderNumber);
+        Collections.reverse(Arrays.asList(this.ordersByOrderNumber));
         System.out.println("Orders by order number (descending):");
         for (Order order : ordersByOrderNumber) {
             System.out.println(order);

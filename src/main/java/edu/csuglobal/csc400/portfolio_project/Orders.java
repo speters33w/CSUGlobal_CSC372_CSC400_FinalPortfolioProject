@@ -1,3 +1,13 @@
+/*
+CSU Global CSC400 Module 8: Portfolio Project
+
+Portfolio Project (300 Points)
+
+Order List Handler for an Online Retailer
+
+Create an Order Class that uses a queue to hold the orders in the order they were taken.
+The queue should contain the customer last name, order number, and order total cost.
+*/
 package edu.csuglobal.csc400.portfolio_project;
 
 import java.util.LinkedList;

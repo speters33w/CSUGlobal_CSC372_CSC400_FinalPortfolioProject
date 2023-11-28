@@ -25,13 +25,12 @@ Student data are private fields in a student class including:
 package edu.csuglobal.csc372.milestone2.sort_students;
 
 /*
-        <!-- https://mvnrepository.com/artifact/com.tupilabs/human-name-parser -->
-        <dependency>
-            <groupId>com.tupilabs</groupId>
-            <artifactId>human-name-parser</artifactId>
-            <version>0.2</version>
-        </dependency>
+ * THIS CLASS REQUIRES THE FOLLOWING DEPENDENCY:
+ * Human Name Parser
+ * https://github.com/kinow/HumanNameParser.java
+ * https://mvnrepository.com/artifact/com.tupilabs/human-name-parser/0.2
  */
+
 import com.tupilabs.human_name_parser.HumanNameParserBuilder;
 import com.tupilabs.human_name_parser.HumanNameParserParser;
 import com.tupilabs.human_name_parser.Name;
@@ -108,7 +107,7 @@ public class Student implements Comparable<Student>, Cloneable   {
     }
 
     /**
-     Parses a human name that can include prefixes, Dr, Fr, Mr, Miss, The Honorable, etc.
+     * Parses a human name that can include prefixes, Dr, Fr, Mr, Miss, The Honorable, etc.
      * Uses the <a href = "https://github.com/tupilabs/HumanNameParser.java">
      *     com.tupilabs.human_name_parser
      * </a> library to parse a human name that can include prefixes, Dr, Fr, Mr, Miss, The Honorable, etc.
@@ -125,7 +124,7 @@ public class Student implements Comparable<Student>, Cloneable   {
     }
 
     /**
-     Parses a human name that can include prefixes, Dr, Fr, Mr, Miss, The Honorable, etc.
+     * Parses a human name that can include prefixes, Dr, Fr, Mr, Miss, The Honorable, etc.
      * Uses the <a href = "https://github.com/tupilabs/HumanNameParser.java">
      *     com.tupilabs.human_name_parser
      * </a> library to parse a human name that can include suffixes, Jr, III, MD, etc.

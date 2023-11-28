@@ -29,6 +29,17 @@ public class Main {
     private Main() {
     } // Utility classes should not have a public or default constructor.
 
+    /**
+     * Main user interface.
+     * Allows a default list of students to be generated,
+     *     or allows the user to manually enter student data.
+     * If user selects manual, the user will be prompted to enter student data.
+     * GPA must be between 0.0 to 4.0, input validated by RegEx Pattern matching.
+     * The user may enter as many student's data entries as desired.
+     * The student array is then sorted in natural order by last name.
+     *
+     * @param args Command line arguments (not used).
+     */
     public static void main(String[] args) {
         LinkedList<Student> students = new LinkedList<>();
         Scanner scanner = new Scanner(System.in);
@@ -47,9 +58,53 @@ public class Main {
                 System.out.printf("%s%n", student);
             }
         }
-        if (input.toUpperCase().charAt(0) == 'D') {
-            // todo implement manual entry
-
+        if (input.toUpperCase().charAt(0) == 'M') {
+            while (true) {
+                System.out.println("Enter the student's full name: ");
+                String name = scanner.nextLine().strip();
+                // todo will not handle surnames like MacDonald, McMillan, OBrien, O'Neil, etc.
+                String[] names = name.split(" ");
+                for (int i = 0; i < names.length; i++) {
+                    names[i] = names[i].substring(0, 1).toUpperCase() + names[i].substring(1).toLowerCase();
+                }
+                name = String.join(" ", names);
+                System.out.println("Enter the student's street address: ");
+                String Address = scanner.nextLine().strip();
+                System.out.println("Enter the student's city, state, and zip code: ");
+                Address = Address + "\n" + scanner.nextLine().strip();
+                String gpaString;
+                // RegEx Pattern https://regexr.com/7nptq allows GPA entry from 0.0 to 4.99.
+                // These patterns restrict to 0.0 to 3.99 and 4.0.
+                while (true) {
+                    System.out.println("Enter the student's grade point average: ");
+                    gpaString = scanner.nextLine().strip();
+                    if (gpaString.matches("[0-3]\\.\\d+") || gpaString.matches("4\\.0+")) {
+                        break;
+                    }
+                    System.out.println("Please enter a valid GPA in the format n.n, n.nn, or n.nnn.");
+                }
+                Student newStudent = new Student(name, Address, Double.parseDouble(gpaString));
+                String response;
+                while(true) {
+                    System.out.printf("You entered: %s%nAdd this student? (Y/N) ", newStudent);
+                    response = scanner.nextLine().toUpperCase();
+                    if (response.charAt(0) == 'Y') {
+                        students.add(newStudent);
+                        System.out.printf("Student %s added successfully.%n", newStudent.getName());
+                        break;
+                    } else if (response.charAt(0) == 'N') {
+                        break;
+                    }
+                }
+                do {
+                    System.out.print("Add another student? (Y/N) ");
+                    response = scanner.nextLine().toUpperCase();
+                } while (response.charAt(0) != 'Y' && response.charAt(0) != 'N');
+                if (response.charAt(0) == 'Y') {
+                    continue;
+                }
+                break;
+            }
         }
         students.sort(null);  // Natural order is by last name, built in to the Student Class.
         printStudentList(students);

@@ -1,4 +1,12 @@
-//https://big-o.io/examples/quicksort/java-generic/
+/* ************************************************************************
+ *    Adapted and modified by Stephan Peters (speters33w)
+ *        from the following source code:
+ *    Title: Generic Quicksort in Java
+ *    Author: Big-O
+ *    Date: 2020
+ *    Availability: https://big-o.io/examples/quicksort/java-generic/
+ *********************************************************************** */
+
 package util.speters33w.sort;
 
 public class QuickSort {
